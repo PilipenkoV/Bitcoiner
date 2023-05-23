@@ -1,0 +1,615 @@
+/* ========== Variables ========== */
+:root {
+	--colorhtml: rgba(14, 14, 14, 1);
+	--colortext: rgb(255, 255, 255);
+	--colorbutton-1: rgba(255, 75, 50, 1);
+	--colorbutton-2: rgba(255, 154, 1, 1);
+	--shadowbutton: rgba(244, 126, 18, 0.6);
+	--background-strings: linear-gradient(45deg, rgba(52, 73, 73, 0.9), rgba(99, 144, 156, 0.9));
+	--title-shadow: rgba(0, 181, 156, 1);
+	--background-server: rgba(120, 120, 120, 0.5);
+	--color-warning: rgba(242, 13, 13, 1);
+	--color-video-guide: rgba(25, 25, 25, 1);
+}
+
+/* ! ========== Reset styles ========== */
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+/* ! ========== General styles ========== */
+
+html {
+	font-family: 'Be Vietnam Pro', sans-serif;
+	font-size: 10px;
+	line-height: 1.6;
+	color: var(--colortext);
+	background-color: var(--colorhtml);
+}
+
+.container {
+	max-width: 1920px;
+}
+
+.wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 5px 0;
+}
+
+h1 {
+	font-size: 4.5rem;
+	font-weight: 900;
+	text-align: center;
+}
+
+h2 {
+	font-size: 3.5rem;
+	font-weight: 900;
+	text-align: center;
+
+}
+
+h1,
+h2 {
+	text-shadow: -1px -1px 10px rgba(0, 181, 156, 1), 2px 2px 5px rgba(0, 181, 156, 1);
+}
+
+h3 {
+	font-size: 2.2rem;
+	font-weight: 600;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+h4 {
+	font-size: 1.8rem;
+	font-weight: 600;
+	text-align: center;
+}
+
+p {
+	font-size: 1.2rem;
+	font-weight: 400;
+}
+
+/* ! ==================== 1st block - header ==================== */
+
+.header {
+	background: url(img/desktop-grid.png) no-repeat center bottom;
+	padding: 0 5px;
+}
+
+.header-logo {
+	text-transform: uppercase;
+	display: inline-block;
+	font-size: 2.8rem;
+	font-weight: 900;
+	line-height: 1;
+	margin: 25px 0 50px;
+	padding: 15px;
+}
+
+.header-button {
+	margin-top: 50px;
+	width: 300px;
+	height: 56px;
+	font-size: 1.8rem;
+	font-weight: 600;
+	color: var(--colortext);
+	background: linear-gradient(45deg, var(--colorbutton-1) 20%, var(--colorbutton-2));
+	box-shadow: -5px -5px 15px var(--shadowbutton), 5px 5px 15px var(--shadowbutton);
+	border: none;
+	border-radius: 28px;
+	transition: all 0.3s linear;
+}
+
+.header-button:hover {
+	transform: scale(1.05);
+}
+
+.header-button:active {
+	background: linear-gradient(45deg, var(--colorbutton-1) 60%, var(--colorbutton-2));
+}
+
+.header-content {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header-content__text {
+	text-align: center;
+	flex: 1 1 49%;
+}
+
+.header-content__img {
+	flex: 1 1 49%;
+	width: clamp(300px, 48%, 600px);
+}
+
+.header-content__img img {
+	width: 100%;
+}
+
+/* ! ==================== 2nd block - messenger ==================== */
+
+.messenger {
+	margin-top: 75px;
+	padding: 0 5px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.messenger-img {
+	width: clamp(300px, 43%, 450px);
+}
+
+.messenger-img img {
+	width: 110%;
+}
+
+.messenger-content {
+	width: clamp(300px, 90%, 650px);
+}
+
+.messenger-content__table {
+	position: relative;
+	display: flex;
+	justify-content: space-around;
+	margin-top: 50px;
+}
+
+.row {
+	border: 1px solid var(--colortext);
+	position: absolute;
+	font-size: 1.6rem;
+	text-align: center;
+	width: 100%;
+	border-radius: 20px;
+	padding: 5px;
+	background: var(--background-strings);
+}
+
+.first-line {
+	top: 92px;
+}
+
+.second-line {
+	top: 196px;
+}
+
+.third-line {
+	top: 300px;
+}
+
+.col {
+	height: 400px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	background-color: rgba(255, 255, 255, 0.1);
+	border-radius: 20px;
+	padding: 5px 5px 15px 5px;
+	margin: 0 5px;
+}
+
+/* ! ==================== 3rd block - protocol ==================== */
+
+.protocol {
+	margin-top: 75px;
+	padding: 0 5px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.protocol-content {
+	width: clamp(300px, 43%, 500px);
+}
+
+.protocol-content ul {
+	margin-top: 20px;
+}
+
+.protocol-content li {
+	border: 1px solid var(--colortext);
+	font-size: 1.6rem;
+	font-weight: 600;
+	margin: 0 0 10px 0;
+	padding: 12px 5px 12px 45px;
+	border-radius: 20px;
+	list-style-type: none;
+	background: url(img/li-style.png) no-repeat left center,
+		var(--background-strings);
+}
+
+.protocol-img {
+	width: clamp(300px, 55%, 660px);
+}
+
+.protocol-img img {
+	width: 90%;
+	float: right;
+}
+
+/* ! ==================== 4th block - server ==================== */
+
+.server {
+	margin-top: 75px;
+	padding: 0 5px 50px 5px;
+	background: url(img/server-full.png) no-repeat right top;
+}
+
+.server-advantages {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.server-advantages-1,
+.server-advantages-2 {
+	width: clamp(300px, 48%, 600px);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.server-advantages__item {
+	border: 1px solid var(--colortext);
+	border-radius: 30px;
+	background-color: var(--background-server);
+	width: clamp(250px, 48%, 290px);
+	padding: 20px 50px;
+	text-align: center;
+	margin: 10px auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.server-advantages__item img {
+	object-position: bottom;
+}
+
+.server-advantages__item p {
+	font-size: 1.4rem;
+	font-weight: 600;
+}
+
+/* ! ==================== 5th block - login ==================== */
+
+.login {
+	margin-top: 100px;
+	padding: 0 5px;
+}
+
+/*  ===== 1. Download to any device ===== */
+
+.login-download {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-bottom: 50px;
+}
+
+.login-download__text {
+	margin-bottom: 25px;
+	flex: 2 1 300px;
+}
+
+.login-download__pc,
+.login-download__mob {
+	flex: 1 1 150px;
+}
+
+.login-download__pc h4,
+.login-download__mob h4 {
+	margin-bottom: 20px;
+}
+
+.login-download__pc-wrapper a,
+.login-download__mob-wrapper a {
+	text-decoration: none;
+	color: var(--colortext);
+}
+
+.login-download__pc-wrapper,
+.login-download__mob-wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+.login-download__pc-item,
+.login-download__mob-item {
+	display: flex;
+	flex-wrap: nowrap;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+	width: 200px;
+	height: 65px;
+	padding: 10px;
+	margin: 10px auto;
+}
+
+.login-download__pc-item {
+	border-radius: 40px;
+	border: 2px solid var(--colorbutton-1);
+}
+
+.login-download__mob-item {
+	border-radius: 10px;
+	border: 2px solid var(--background-server);
+}
+
+
+.login-download__pc-item p,
+.login-download__mob-item p {
+	font-size: 1.6rem;
+	padding: 0 10px;
+}
+
+.login-download__mob-item p:first-of-type {
+	font-size: 0.8rem;
+}
+
+/*  ===== 2. Enter your login and password ===== */
+
+.login-password {
+	display: flex;
+	margin-bottom: 50px;
+}
+
+.login-password__text {
+	flex: 1 1 100%;
+}
+
+.warning {
+	color: var(--color-warning);
+	font-weight: 900;
+	text-transform: uppercase;
+	display: inline-block;
+	margin-top: 20px;
+}
+
+.login-password__img {
+	flex: 1 1 100%;
+	padding: 10px;
+}
+
+.login-password__img img {
+	width: 100%;
+}
+
+/*  ===== 3. Create a new chat room ===== */
+
+.chat-room {
+	display: flex;
+	margin-bottom: 50px;
+}
+
+.chat-room__text {
+	flex: 1 1 100%;
+}
+
+.namechat {
+	color: var(--colorbutton-1);
+	margin-bottom: 20px;
+}
+
+.chat-room__img {
+	flex: 1 1 100%;
+	padding: 10px;
+}
+
+.chat-room__img img {
+	width: 100%;
+}
+
+/*  ===== 4. Enjoy your privacy! ===== */
+
+.privacy {
+	display: flex;
+	margin-bottom: 50px;
+}
+
+.privacy__text {
+	flex: 1 1 100%;
+}
+
+.privacy__img {
+	flex: 1 1 100%;
+	padding: 10px;
+}
+
+.privacy__img img {
+	width: 100%;
+}
+
+/* ! ==================== dividing line ==================== */
+
+.dividing-line {
+	height: 5px;
+	background-color: var(--colortext);
+}
+
+/* ! ==================== 6th block - video-guide ==================== */
+
+.video-guide {
+	margin-top: 70px;
+	padding: 0 5px;
+	background-color: var(--color-video-guide);
+}
+
+.video-guide__wrapper {
+	max-width: 900px;
+	margin: 30px auto;
+}
+
+.video-guide__wrapper video {
+	width: 100%;
+}
+
+/* ! ==================== 7th block - footer ==================== */
+
+.footer {
+	min-height: 40px;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: space-evenly;
+	padding: 5px;
+	margin-top: 10px;
+	font-size: 1rem;
+}
+
+.footer a {
+	text-decoration: none;
+	color: var(--colortext);
+	border-bottom: 1px solid transparent;
+	transition: all 0.2s linear;
+}
+
+.footer a:hover {
+	color: var(--colortext);
+	color: var(--colorbutton-2);
+	border-bottom: 1px solid var(--colorbutton-2);
+}
+
+
+/* ! ==================== settings for tablets ==================== */
+
+@media (max-width: 950px) {
+
+	html {
+		font-size: 8px;
+	}
+
+	/* ! ===== 1st block - header ===== */
+
+	.logo-center {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.header-logo {
+		margin: 0 auto;
+	}
+
+	.header-content {
+		flex-direction: column-reverse;
+	}
+
+	/* ! ===== 2nd block - messenger ===== */
+
+	.messenger {
+		flex-direction: column;
+	}
+
+	.row {
+		font-size: 1.4em;
+	}
+
+	/* ! ===== 4th block - server ===== */
+
+	.server-advantages {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.server-advantages-1,
+	.server-advantages-2 {
+		width: clamp(300px, 60%, 600px);
+	}
+
+	/* ! ===== 5th block - login ===== */
+
+	.login {
+		margin-top: 50px;
+	}
+
+	.login-download__pc {
+		display: none;
+	}
+
+	.login-download__text {
+		margin-bottom: 5px;
+		flex: none;
+	}
+
+	.login-download__mob h4 {
+		display: none;
+	}
+
+	.login-download,
+	.login-password,
+	.chat-room,
+	.privacy {
+		flex-direction: column;
+		text-align: center
+	}
+
+	.login-password__img,
+	.chat-room__img,
+	.privacy__img {
+		max-width: 80%;
+		margin: 0 auto;
+	}
+
+	.protocol {
+		flex-direction: column;
+	}
+
+	.protocol-content {
+		width: clamp(300px, 70%, 500px);
+	}
+
+	/* ! ===== 6th block - video-guide ===== */
+
+	.video-guide__wrapper {
+		max-width: 75%;
+	}
+}
+
+/* ! ==================== settings for mobile phones ==================== */
+
+@media (max-width: 675px) {
+
+	/* ! ===== 2nd block - messenger ===== */
+
+	.row {
+		font-size: 1.4em;
+	}
+
+	.first-line {
+		top: 85px;
+	}
+
+	.second-line {
+		top: 180px;
+	}
+
+	.third-line {
+		top: 300px;
+	}
+
+	.col img:first-child {
+		width: 50px;
+	}
+
+	/* ! ===== 5th block - login ===== */
+
+	.login {
+		margin-top: 10px;
+	}
+}
